@@ -1,14 +1,12 @@
 public class Main {
     public static void main(String[] args) {
 
-        int pao = 10;
-        int acucar = 20;
+        boolean x = true;
+        boolean y = false;
 
-        System.out.println(pao == acucar);
-        System.out.println(pao != acucar);
-        System.out.println(pao > acucar);
-        System.out.println(pao < acucar);
-        System.out.println(pao >= acucar);
-        System.out.println(pao <= acucar);
+        System.out.println(x && y);
+        System.out.println(x || y);
+        System.out.println(!x);
+
     }
 }
