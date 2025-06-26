@@ -1,12 +1,32 @@
 public class Main {
     public static void main(String[] args) {
 
-        boolean x = true;
-        boolean y = false;
+        int idade = 30;
 
-        System.out.println(x && y);
-        System.out.println(x || y);
-        System.out.println(!x);
+        if (idade > 18) {
+            System.out.println("Você é maior de idade");
+        } else {
+            System.out.println("Você é menor de idade");
+        }
 
-    }
+        boolean estaChovendo = true;
+
+        if(!estaChovendo) {
+            System.out.println("Vamos sair para passear");
+        } else {
+            System.out.println("Vamos ficar em casa");
+        }
+
+        boolean temDinheiro = true;
+        boolean temCartao = false;
+
+        if(temDinheiro && temCartao){
+            System.out.println("Pede um ifood e um zé delivery");
+        } else if(temDinheiro || temCartao) {
+            System.out.println("Pede um ifood");}
+        else {
+                System.out.println("Não pede nada");
+            }
+        }
+
 }
