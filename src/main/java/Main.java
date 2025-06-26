@@ -1,20 +1,29 @@
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Digite o nome: ");
-        String nome = scanner.nextLine();
-        System.out.println("Nome: " + nome);
+        int numero = 10;
+        double d = numero;
 
-        System.out.println("Digite a idade: ");
-        int idade = scanner.nextInt();
-        System.out.println("Idade: " + idade);
+        double d2 = 10.5;
+        int int2 = (int) d2;
 
-        System.out.println("Digite se você está empregado sim(true) ou não(false)");
-        boolean empregado = scanner.nextBoolean();
-        System.out.println("Olá, sou " + nome + " tenho " + idade + " estou empregado " + empregado);
+        Integer numeroInteger = 10;
+        String numeroString = numeroInteger.toString();
 
+        Double numeroDouble = 10.0;
+        String numeroDoubleString = numeroDouble.toString();
+
+        String numeroStringDois = "1234";
+        Integer numeroConvertido = Integer.parseInt(numeroStringDois);
+        Double numeroConvertidoDouble = Double.parseDouble(numeroStringDois);
+        Long numeroConvertidoLong = Long.parseLong(numeroStringDois);
+
+        Long numeroLong = 10L;
+        String numeroStringLong = numeroLong.toString();
+
+        System.out.println(d);
+        System.out.println(int2);
+        System.out.println(numeroInteger + " " + numeroString);
+        System.out.println(numeroStringDois + " " + numeroConvertido);
     }
 }
