@@ -1,16 +1,20 @@
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        String nome = "Joana";
-        String sobrenome = "da Silva";
 
-        int tamanhoString = nome.length();
-        boolean saoIguais = nome.equals(sobrenome);
-        String nomeCompleto = nome.concat(sobrenome);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Digite o nome: ");
+        String nome = scanner.nextLine();
+        System.out.println("Nome: " + nome);
 
-        System.out.println("Olá " + nome.toLowerCase() + " seu nome tem " + tamanhoString + " caracteres.");
-        System.out.println("O nome e sobrenome são iguais? " + saoIguais);
-        System.out.println("Nome Completo: " + nomeCompleto);
+        System.out.println("Digite a idade: ");
+        int idade = scanner.nextInt();
+        System.out.println("Idade: " + idade);
+
+        System.out.println("Digite se você está empregado sim(true) ou não(false)");
+        boolean empregado = scanner.nextBoolean();
+        System.out.println("Olá, sou " + nome + " tenho " + idade + " estou empregado " + empregado);
 
     }
 }
