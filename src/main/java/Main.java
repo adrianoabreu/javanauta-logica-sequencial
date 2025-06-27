@@ -1,40 +1,27 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
 
-        List<String> listaDeCompras = new ArrayList<>();
-        listaDeCompras.add("Mamão");
-        listaDeCompras.add("Sabão em pó");
-        listaDeCompras.add("Macarrão");
-        listaDeCompras.add(1,"Banana");
+        HashMap<String, Double> notasAlunos = new HashMap<>();
+        notasAlunos.put("Alice", 10.5);
+        notasAlunos.put("Mateus", 8.0);
+        notasAlunos.put("Maria", 9.9);
 
-        for (String item : listaDeCompras) {
-            System.out.println(item);
+        for(String nome : notasAlunos.keySet()) {
+            double nota = notasAlunos.get(nome);
+            System.out.println(nome + " : " + nota);
         }
 
-        String item = listaDeCompras.get(3);
-        System.out.println("Na posição 3 eu tenho: " + item);
-
-        listaDeCompras.remove("Sabão em pó");
-
-        for(String item2 : listaDeCompras){
-            System.out.println(item2);
+        for(Map.Entry<String, Double> nota : notasAlunos.entrySet()) {
+            String nome = nota.getKey();
+            double valorNota = nota.getValue();
+            System.out.println(nome + " : " + valorNota);
         }
-
-        boolean eVazio = listaDeCompras.isEmpty();
-        int tamanho = listaDeCompras.size();
-        boolean contem = listaDeCompras.contains("Arroz");
-
-        System.out.println("Lista vazia? " + eVazio);
-        System.out.println("Tamanho da lista: " + tamanho);
-        System.out.println("Lista contem o item Arroz? " + contem);
-
-        listaDeCompras.forEach(produto -> System.out.println("Produtos: " + produto));
-
-        listaDeCompras.clear();
-        System.out.println("A lista está vazia? " + listaDeCompras.isEmpty());
+        
+        double nota = notasAlunos.get("Alice");
+        System.out.println("Nota da Alice " + nota);
 
 
 
